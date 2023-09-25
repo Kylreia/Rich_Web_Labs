@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 1.5em;
+}
+
+.box-one {
+    padding: 0em;
+    background-color: #EB5757;
+    border: 0em solid #27AE60;
+    margin: 0.5em;
+}
+
+.box-two {
+    padding: 0.1em;
+    background-color: #2D9CDB;
+    border: 0 solid #27AE60;
+    margin: 0em;
+}
+
+.box-three {
+    padding: 0.2em;
+    background-color: #00fa9a;
+    border: 0 solid #27AE60;
+    margin: 0em;
+}
