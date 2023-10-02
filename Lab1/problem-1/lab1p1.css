@@ -1,0 +1,11 @@
+.my-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.my-grid > div {
+    margin: 1px;
+    border: 1px solid black;
+    background: violet;
+    text-align: center;
+}
