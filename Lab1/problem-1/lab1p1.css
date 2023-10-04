@@ -1,11 +1,22 @@
 .my-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.my-grid > div {
-    margin: 1px;
+.my-div {
+    flex-grow: 0.25;
     border: 1px solid black;
-    background: violet;
     text-align: center;
+}
+
+@media (max-width: 960px) {
+    .my-div {
+        width: calc(50% - 2px)
+    }
+}
+
+@media (max-width: 640px) {
+    .my-div {
+        width: calc(100% - 2px)
+    }
 }
