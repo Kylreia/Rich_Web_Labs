@@ -18,21 +18,39 @@ let specialChars = [
 
 // Variable to generate random number between 1-100
 var myVar = Math.floor(Math.random() * 99);
+
+// Variable to read all the images in the document
 const imgs = document.getElementsByTagName("img");
+
+// Variables to keep count of the type of characters claimed
+var mySTD = 0;
+var mySPC = 0;
+
 // Determine which image set a character will be selected from
 // if the number is between 1-70, select random character from standard set
-if (myVar >= 0 && myVar <= 69) {
-    alert("You have obtained a standard character");
+if (myVar >= 0 && myVar <= 69) { 
+    var mySTD = localStorage.getItem("reSTD");
+    localStorage.setItem("reSTD", mySTD += 1);
     const randomImg = Math.floor(Math.random() * standardChars.length)
     for(let i = 0; i < imgs.length; i++) {
         imgs[i].src = standardChars[randomImg]
     }
+    alert("You have obtained a standard character");
 }
+
 // else, select random character from special set
 else {
-    alert("You have obtained a special character");
+    var mySPC = localStorage.getItem("reSPC");
+    localStorage.setItem("reSPC", mySPC += 1);
     const randomImg = Math.floor(Math.random() * specialChars.length)
     for(let i = 0; i < imgs.length; i++) {
         imgs[i].src = specialChars[randomImg]
     }
+    alert("You have obtained a special character");
 }
+
+//
+var mySTD = localStorage.getItem("reSTD");
+var mySPC = localStorage.getItem("reSPC")
+
+alert("You currently have " + mySTD.length + " standard character(s) & " + mySPC.length + " special character(s)")
