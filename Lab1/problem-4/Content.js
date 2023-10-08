@@ -18,22 +18,21 @@ let specialChars = [
 
 // Variable to generate random number between 1-100
 var myVar = Math.floor(Math.random() * 99);
-alert("myVar value is: " + myVar)
-
-// Variable for images
 const imgs = document.getElementsByTagName("img");
-
 // Determine which image set a character will be selected from
 // if the number is between 1-70, select random character from standard set
-if (myVar >= 0 && x <= 69) {
-    randomImg = Math.floor(Math.random() * standardChars.length)
-    imgs.src = standardChars[randomImg]
-    alert("You have obtained a standard character")
+if (myVar >= 0 && myVar <= 69) {
+    alert("You have obtained a standard character");
+    const randomImg = Math.floor(Math.random() * standardChars.length)
+    for(let i = 0; i < imgs.length; i++) {
+        imgs[i].src = standardChars[randomImg]
+    }
 }
-
 // else, select random character from special set
 else {
-    randomImg = Math.floor(Math.random() * specialChars.length)
-    imgs.src = specialChars[randomImg]
-    alert("You have obtained a special character")
+    alert("You have obtained a special character");
+    const randomImg = Math.floor(Math.random() * specialChars.length)
+    for(let i = 0; i < imgs.length; i++) {
+        imgs[i].src = specialChars[randomImg]
+    }
 }
