@@ -8,22 +8,22 @@
     <title>Phone Directory</title>
 </head>
 <body>
+    <h1>Phone Directory</h1>
     <div class="container">
-        <h1>Phone Directory</h1>
-        <input type="text" placeholder="Contact Name">
-        <input type="text" placeholder="Mobile Number">
-        <input type="text" placeholder="Email">
-        <button>Add Contact</button>
+        <input type="text" id="contact-name" placeholder="Contact Name" required>
+        <input type="text" id="mobile-no" placeholder="Mobile Number" required>
+        <input type="text" id="email" placeholder="Email" required>
+        <button id="myBtn" type="submit">Add Contact</button>
     </div>
     <div class="search-cont">
         <p>Search contact by Mobile No:</p>
         <input type="text">
     </div>
+    <h1>Contacts Summary</h1>
     <div class="my-grid">
-        <h1>Contacts Summary</h1>
-        <div class="my-div">1</div>
-        <div class="my-div">2</div>
-        <div class="my-div">3</div>
+        <div class="my-div">Name</div>
+        <div class="my-div">Mobile</div>
+        <div class="my-div">Email</div>
     </div>
     <script src="lab2p1.js"></script>
 </body>
