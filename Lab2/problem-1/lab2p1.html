@@ -11,10 +11,10 @@
     <h1>Phone Directory</h1>
     <form>
         <div class="form-cont">
-            <input type="text" id="contact-name" placeholder="Contact Name" required>
-            <input type="number" id="mobile-no" placeholder="Mobile Number" required>
-            <input type="email" id="email" placeholder="Email" required>
-            <input type="submit" id="addContact" value="Add Contact">
+            <input type="text" id="contact-name" placeholder="Contact Name">
+            <input type="number" id="mobile-no" placeholder="Mobile Number">
+            <input type="email" id="email" placeholder="Email">
+            <input type="submit" onclick="addContact(event); return false;" value="Add Contact">
         </div>
     </form>
     <div class="search-contact">
@@ -24,12 +24,11 @@
     <h1>Contacts Summary</h1>
     <table class="my-table">
         <thead>
-            <tr>
-                <th class="my-th">Name</th>
-                <th class="my-th">Mobile</th>
-                <th class="my-th">Email</th>
-            </tr>
+            <th class="my-th">Name</th>
+            <th class="my-th">Mobile</th>
+            <th class="my-th">Email</th>
         </thead>
+        <tbody id="Phone-list"></tbody>
     </table>
     <script src="lab2p1.js"></script>
 </body>
