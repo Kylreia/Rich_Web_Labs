@@ -2,34 +2,29 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="lab2p1.css">
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Phone Directory</title>
 </head>
 <body>
     <h1>Phone Directory</h1>
-    <form>
-        <div class="form-cont">
-            <input type="text" id="contact-name" placeholder="Contact Name">
-            <input type="number" id="mobile-no" placeholder="Mobile Number">
-            <input type="email" id="email" placeholder="Email">
-            <input type="submit" onclick="addContact(event); return false;" value="Add Contact">
-        </div>
-    </form>
-    <div class="search-contact">
-        <p>Search contact by Mobile No:</p>
-        <input type="search">
+    <div id="formContact" class="contactPanel">
+        <form id="contact" action="#" >
+            <input type="text" name="name" id="name" placeholder="Contact Name"/>
+            <input type="tel" name="phone" id="phone" placeholder="Mobile Number"/>
+            <input type="email" name="email" id="email" placeholder="Email"/>
+            <input name="submit" type="button" onclick="addContact();" value="Add Contact"/>                   
+        </form>
     </div>
-    <h1>Contacts Summary</h1>
-    <table class="my-table">
-        <thead>
-            <th class="my-th">Name</th>
-            <th class="my-th">Mobile</th>
-            <th class="my-th">Email</th>
-        </thead>
-        <tbody id="Phone-list"></tbody>
+    <div id="search" class="contactPanel">
+        <p>Search contact by Mobile No:</p>
+        <input type="text" class="search_field" name="search" id="myInput" onkeyup="phoneSearch()"/>
+    </div>
+    <table id="myTable">
     </table>
+    <div id="error">Invalid Input</div>
+    <div id="noResult">Contact not found</div>
     <script src="lab2p1.js"></script>
-</body>
+</body>    
 </html>
