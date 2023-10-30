@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="lab2p3.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Github API</title>
+</head>
+<body>
+    <div>
+        <div>
+            <h1>Github User Profile Finder</h1>
+        </div>
+        <div>
+            <input type="text" id="searchField" placeholder="Username">
+            <span class="btnContainer">
+                <a class="searchButton">Search</a>
+            </span>
+        </div>
+        <div class="profileContainer">
+            <div id="userHeadings"> 
+                <p>User Profile</p>
+            </div>
+            <div class="profileDiv">
+                <p class="profileImg"></p>
+                <p class="profileName"></p>
+                <p class="profileUsername"></p>
+                <p class="profileEmail"></p>
+                <p class="profileLocation"></p>
+                <p class="profileGists"></p>
+            </div>
+        </div> 
+        <div class="reposContainer">
+            <div id="userHeadings"> 
+                <p>User Repos</p>
+            </div>   
+            <div id="reposTable">
+            </div>
+        </div>
+    </div>
+    <script src="lab2p3.js"></script>
+</body>
+</html>
