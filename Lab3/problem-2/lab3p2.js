@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    const {interval, map, takeWhile, tap } = rxjs;
+    const {interval, map, takeWhile, tap} = rxjs;
 
     const hour = document.getElementById("hrs");
     const minute = document.getElementById("mins");
@@ -19,14 +19,12 @@ document.addEventListener("DOMContentLoaded", function() {
             hour.textContent = hour < 10 ? `0${hours}` : `${hours}`;
             minute.textContent = minutes < 10 ? `0${minutes}` : `${minutes}`;
             second.textContent = seconds < 10 ? `0${seconds}` : `${seconds}`;
-
-            console.log(`Hour: ${hours} Min: ${minutes} Sec: ${seconds} Time Left: ${val}`);
         })
-    ); // End timer$
+    );  // end timer()
 
     startClick$.subscribe(() => {
         timer$.subscribe();
-    }); 
+    });
 
     function total() {
         const hours = parseInt(document.getElementById("hr").value) || 0;
@@ -34,6 +32,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const seconds = parseInt(document.getElementById("sec").value) || 0;
     
         return hours * 3600 + minutes * 60 + seconds;
-    }
+    } // end function total()
 
 });
