@@ -1,9 +1,9 @@
 # Answers to practice questions relating to streams (from Lab 3):
 # Q.1 Explain what is meant by the stream abstraction. What is the relationship between streams and the observer pattern?  What are streams useful for modeling and when might you use them in Rich Web development?
-Answer:
+Answer: Stream abstraction is a computer science / programming concept in which a sequence of data is handled when it is made available. The observer pattern notices the state changes of its dependencies (observers) and then reacts to these changes. Since streams are changing over time due to different factors, the observer then notifies and reacts to these changes. These are useful for Reactive Programming and situations such as fetching and processing data, as well as real-time updates.
 
 # Q.2 Assume that you are building an interface to an API in your Rich Web App. Describe in detail how you could use the RxJS library to handle asynchronous network responses to API requests. In your opinion, what are the benefits to using a streams library for networking over, say, promises? And what do you think are the downsides?
-Answer:
+Answer: In order to use the RxJS libary, we need to first import it to our project. To handle asynchronous network responses, we can use the operators included to for example, switch to other observables i.e. responses, map to process these responses and catch error to handle errors that arise. Some benefits include being able to deal with complex asynchronous observables, operators which help us use streams more efficiently, as well as we are able to use it for event handling. A major downside of this is the complex nature of not only its usage but as well as debugging.
 
 # Q.3 Consider three asynchronous tasks, A,B & C. What are the consequences of these functions sharing global state? What is a good practice to alleviate any problems associated with this?
-Answer:
+Answer: There could be state inconsistencies if one task is reading it and another task is modifying it. The race condition is also another potential issue with this scenario. Lastly, difficulties in maintaining and debugging arise in this scenario. To alleviate problems associated with this, the best solution is to use local states. However, if global state must be used, we could either use locks or immutable data structures. Locks ensure only one task can access the state at a time while immutable data structures ensure that once data is created this cannot be modified.
