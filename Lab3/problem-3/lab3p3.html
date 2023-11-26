@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="lab3p3.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Managing related Notes</title>
+</head>
+<body>
+    <div class="popup-box">
+        <label id="notes" for="myInput">Write note:</label>
+        <input type="text" id="myInput">
+        <label for="parentNote">Select Parent:</label>
+        <select id="parentNote">
+            <option value="">None</option>
+        </select>
+    </div>
+    <div class="add-btn">
+        <button onclick="createNote()" id="addBtn">Add Note</button>
+    </div>
+    <h1>Your notes appear here:</h1>
+    <div class="wrapper">
+        <ul id="noteList"></ul>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/rxjs/7.8.1/rxjs.umd.min.js"></script>
+    <script src="lab3p3.js"></script>
+</body>
+</html>
