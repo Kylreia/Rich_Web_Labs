@@ -8,3 +8,5 @@ There are 7 standard and 3 special characters (Characters are from the game Gens
 Pull Rates:
     70% for a random standard character
     30% for a random special character
+
+# Lab 4
