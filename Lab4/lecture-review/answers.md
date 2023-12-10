@@ -1,3 +1,8 @@
+# Lab 4 Overview
+1. Convert your notes application from lab 1 to use a react application: notes-app folder
+2. Integrate some external functionality or API into your application: API to handle requests such as POST, GET, DELETE, etc from the application
+3. Extend your application with additional functions – be creative: server that lets the user store their notes in a database; any changes made in the application will reflect in the server, which can be reloaded for future use
+
 # Answers to exercises in Lab 4
 # Q.1 Explain using code examples what is meant by props and state in React JS?
 Check example.js for a code example. Properties are utilised to pass data from a parent component to a child component
